@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <title>IMC (Índice de massa corporal)</title>
+</head>
+<body>
+
+    <section class="section">
+        <div class="container">
+
+            <section class="has-text-centered">
+                <h1 class="title is-2 has-text-success">Veja qual seu imc</h1>
+                <p class="subtitle has-text-success mb-6">Índice de massa corporal</p>
+            </section>
+
+            <section>
+                <p>
+                    O IMC é reconhecido como padrão internacional para avaliar o grau de sobrepeso e obesidade. É calculado dividindo o peso (em kg) pela altura ao quadrado (em metros).
+                    <p class="has-text-centered m-5 has-text-success">
+                        IMC = Peso ÷ (Altura × Altura)
+                    </p>
+                </p>
+            </section>
+
+            <section class="formularios">
+
+                <label class="label" for="peso">Digite seu peso</label>
+                <div class="control">
+                    <input class="input is-success" type="text" id="peso" placeholder="Digite seu peso (Ex:. 75.5)">
+                </div>
+
+                <label class="label" for="altura">Digite sua altura</label>
+                <div class="control">
+                    <input class="input is-success" type="text" id="altura" placeholder="Digite sua altura (Ex:. 1.80)">
+                </div>
+
+                <button id="calcular" class="button is-success mt-4 mb-5">
+                    Calcular
+                </button>
+
+                <section>
+                    
+                    <div class="notification has-background-success-light">
+                        <h1 class="title has-text-success">Resultado</h1>
+                        <span id="resultado"></span>
+                    </div>
+                </section>
+
+            </section>
+
+            <section class="tabela">
+
+                <table class="mt-6 table is-fullwidth is-striped is-hoverable">
+                    <thead>
+                        <tr>
+                            <th>IMC</th>
+                            <th>Clacificação</th>
+                            <th>Obesidade (grau)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="has-text-success">
+                            <td>Menor que 18.5</td>
+                            <td>Magreza</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr class="has-text-success">
+                            <td>Entre 18.5 e 24.9</td>
+                            <td>Normal</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr class="has-text-success">
+                            <td>Entre 25.0 e 29.9</td>
+                            <td>Sobrepeso</td>
+                            <td>01</td>
+                        </tr>
+                        <tr class="has-text-success">
+                            <td>Entre 30.0 e 39.9</td>
+                            <td>Obesidade</td>
+                            <td>02</td>
+                        </tr>
+                        <tr class="has-text-success">
+                            <td>Maior que 40.0</td>
+                            <td>Obesidade grave</td>
+                            <td>03</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
